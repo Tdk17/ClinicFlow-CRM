@@ -1,0 +1,32 @@
+@import "tailwindcss";
+
+@media print {
+  /* Hide all non-printable elements */
+  body * {
+    visibility: hidden;
+  }
+  
+  /* Display only the printable document container and its contents */
+  .printable-document, .printable-document * {
+    visibility: visible;
+  }
+  
+  /* Position and style the document for printing */
+  .printable-document {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    margin: 0;
+    padding: 1.5cm;
+    background: white !important;
+    color: black !important;
+    box-shadow: none !important;
+    border: none !important;
+  }
+  
+  /* Suppress screen-only interaction elements */
+  .no-print {
+    display: none !important;
+  }
+}

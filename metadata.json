@@ -1,0 +1,6 @@
+{
+  "name": "ClinicFlow CRM",
+  "description": "SaaS CRM completo para clínicas, consultórios e profissionais de saúde com gestão de pacientes, agenda, prontuários, financeiro e assinaturas via Stripe.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

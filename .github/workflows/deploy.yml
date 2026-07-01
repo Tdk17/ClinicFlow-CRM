@@ -1,0 +1,32 @@
+name: Deploy ClinicFlow CRM to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Install Flutter stable
+        uses: subosito/flutter-action@v2
+        with:
+          channel: 'stable'
+          flutter-version: '3.19.x' # Or use stable latest
+
+      - name: Flutter doctor & pub get
+        run: |
+          flutter doctor
+          flutter pub get
+
+      - name: Build Flutter Web App
+        run: flutter build web --release --base-href /clinicflow-crm/
+
+      - name: Deploy static files to GitHub Pages
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          folder: build/web
+          branch: gh-pages

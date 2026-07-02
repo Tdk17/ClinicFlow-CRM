@@ -14,7 +14,8 @@
       "sizes": "512x512"
     }
   ],
-  "start_url": "/?pwa=true",
+  "start_url": "/ClinicFlow-CRM/?pwa=true",
+  "scope": "/ClinicFlow-CRM/",
   "background_color": "#FFFFFF",
   "theme_color": "#0F172A",
   "display": "standalone",
